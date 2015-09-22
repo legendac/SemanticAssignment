@@ -1,0 +1,2267 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/adamctj/ontologies/AmsBurger"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/adamctj/ontologies/AmsBurger">
+    <Prefix name="" IRI="http://www.semanticweb.org/adamctj/ontologies/AmsBurger#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.productontology.org/#</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AmsBurger Restaurant Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An ontology of a AmsBurger Restaurant in Singapore. Date of Establishment still unknown. Currently still at planning stage.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Adam Chee</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://www.productontology.org/id/Apple_cake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.productontology.org/id/Cheese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.productontology.org/id/Chocolate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.productontology.org/id/Dairy_product"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AlmondNuts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apfelstrudel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AustralianPremiumBeef"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Avocado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BalsamicVinegar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BarbecueSauce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Beef"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BlackyFortress"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bread"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Burger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BurgerBread"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capscium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CashewNutSauce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CashewNuts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChampionIceCream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cheese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CheeseyDelight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CheesyChickenLoving"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CherryTomatoes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chicken"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChickenEggWhichComesFirstBurpppp"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChineseWokStirFriedRice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Chocolate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cold"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CookingMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Country"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cucumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Curry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dessert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DijonMustard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DomainConcept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Egg"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FamousChocolateIceCream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FilletOFish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FishNChips"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Food"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrenchFries"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FriedTofuSkin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fruit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FruitPlatter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GardenSalad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GarlicClove"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreekSalad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreenApple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreenCapscium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GreenOnions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroundPepper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Halibut"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hot"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceCream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IceCreamCone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inarizushi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IncredibleBeefGoodness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingredients"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JapaneseCurryRice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JapaneseRice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lamb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lettuce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mains"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mango"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaryHadALittleLamb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mayonaise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mayonnaise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Meat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MergeShadow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Milk"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nuts"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OliveOil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Onion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OnionRings"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Others"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OysterSauce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pineapple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlumTomatoes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Potato"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PotatoSalad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RedApple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RedCapscium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RussianStyleEggSalad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sachertorte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Salad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Salmon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SalmonSushi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sandwich"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SandwichBread"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sauce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SeaWeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sides"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SmokedSalmon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SnickersBar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SnickersSalad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SourCream"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Strawberry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sushi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TarTarSauce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TastyVegeMix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThaiRice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ThaiSweetChilli"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tomato"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TomatoKetchup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TripleS-SmokeySalmonSandwich"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tuna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TunaFantasy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ValuePartition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegetable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WagyuBeef"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WagyuBeefSpecial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Warm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#YellowCapscium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Yogurt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Apple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Bread"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Cake"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Cheese"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Chocolate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Curry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Fruit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Salad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Sauce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#x-Tuna"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cookingMethod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCountryOfOrigin"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasIngredient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSauce"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTemperature"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isIngredientOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSauceOf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#America"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Austria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Barbequing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boiling"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#China"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DeepFrying"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#France"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fresh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Greece"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Italy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JapRiceBatch33"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Japan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Order33ChickenBurgerWithEggs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Order33ChickenBurgerWithoutEggs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Order34ChickenBurger"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Order35FishFillet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Order36LambChop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Order37FishFillet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Raw"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RiceBatch34"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Russia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ShallowFrying"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Singapore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Stewing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StirFried"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thailand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Toasting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WagyuBeefNotSoNice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WagyuBeefRaw"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#33WagyuBurgerWellDone"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Apple"/>
+        <Class IRI="#x-Apple"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Balsamic_vinegar"/>
+        <Class IRI="#BalsamicVinegar"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Black_Forest_cake"/>
+        <Class IRI="#BlackyFortress"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Bread"/>
+        <Class IRI="#x-Bread"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Cake"/>
+        <Class IRI="#x-Cake"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Cheese"/>
+        <Class IRI="#x-Cheese"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Cheesecake"/>
+        <Class IRI="#CheeseyDelight"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Chocolate"/>
+        <Class IRI="#x-Chocolate"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Curry"/>
+        <Class IRI="#x-Curry"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Fruit"/>
+        <Class IRI="#x-Fruit"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Ingredient"/>
+        <Class IRI="#Ingredients"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Olive_oil"/>
+        <Class IRI="#OliveOil"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Salad"/>
+        <Class IRI="#x-Salad"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Sauce"/>
+        <Class IRI="#x-Sauce"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.productontology.org/id/Tuna"/>
+        <Class IRI="#x-Tuna"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Apfelstrudel"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Cake"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Apple"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Apple"/>
+        <Class IRI="#x-Apple"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BlackyFortress"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Cake"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Chocolate"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasCountryOfOrigin"/>
+                <NamedIndividual IRI="#America"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Bread"/>
+        <Class IRI="#x-Bread"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Cake"/>
+        <Class IRI="#x-Cake"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChampionIceCream"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#IceCream"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#FamousChocolateIceCream"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Cheese"/>
+        <Class IRI="#x-Cheese"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CheeseyDelight"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Cake"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="http://www.productontology.org/id/Cheese"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CheesyChickenLoving"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Burger"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#Cheese"/>
+                </ObjectSomeValuesFrom>
+                <ObjectMinCardinality cardinality="3">
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#Chicken"/>
+                </ObjectMinCardinality>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChickenEggWhichComesFirstBurpppp"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Burger"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#Egg"/>
+                </ObjectSomeValuesFrom>
+                <ObjectMinCardinality cardinality="3">
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#Chicken"/>
+                </ObjectMinCardinality>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChineseWokStirFriedRice"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#OysterSauce"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Rice"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ChineseWokStirFriedRice"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#cookingMethod"/>
+            <NamedIndividual IRI="#StirFried"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Chocolate"/>
+        <Class IRI="#x-Chocolate"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Curry"/>
+        <Class IRI="#x-Curry"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FilletOFish"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Burger"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSauce"/>
+                <Class IRI="#TarTarSauce"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Halibut"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FishNChips"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Others"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasSauce"/>
+                    <Class IRI="#Mayonnaise"/>
+                </ObjectSomeValuesFrom>
+                <ObjectMinCardinality cardinality="2">
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#Halibut"/>
+                </ObjectMinCardinality>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FrenchFries"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sides"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#cookingMethod"/>
+                <NamedIndividual IRI="#DeepFrying"/>
+            </ObjectHasValue>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Potato"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Fruit"/>
+        <Class IRI="#x-Fruit"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FruitPlatter"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Dessert"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Fruit"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GardenSalad"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Salad"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Avocado"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Cheese"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#GreenOnions"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Lettuce"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSauce"/>
+                <Class IRI="#OliveOil"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GreekSalad"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Salad"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasSauce"/>
+                    <Class IRI="#BalsamicVinegar"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasSauce"/>
+                    <Class IRI="#OliveOil"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Cucumber"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Inarizushi"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sushi"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#FriedTofuSkin"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#IncredibleBeefGoodness"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Burger"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#AustralianPremiumBeef"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#JapaneseCurryRice"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Others"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Curry"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#JapaneseRice"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Rice"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasTemperature"/>
+                <Class IRI="#Cold"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#JapaneseRice"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Rice"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasCountryOfOrigin"/>
+                <NamedIndividual IRI="#Japan"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MaryHadALittleLamb"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Burger"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Lamb"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OnionRings"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sides"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#cookingMethod"/>
+                <NamedIndividual IRI="#DeepFrying"/>
+            </ObjectHasValue>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Onion"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PotatoSalad"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Salad"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Potato"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#RussianStyleEggSalad"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Salad"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#SourCream"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#Yogurt"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSauce"/>
+                <Class IRI="#DijonMustard"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sachertorte"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Cake"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="http://www.productontology.org/id/Chocolate"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasCountryOfOrigin"/>
+                <NamedIndividual IRI="#Austria"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Salad"/>
+        <Class IRI="#x-Salad"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SalmonSushi"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sushi"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Salmon"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sauce"/>
+        <Class IRI="#x-Sauce"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SnickersSalad"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Salad"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#GreenApple"/>
+                </ObjectSomeValuesFrom>
+                <ObjectMinCardinality cardinality="3">
+                    <ObjectProperty IRI="#hasIngredient"/>
+                    <Class IRI="#SnickersBar"/>
+                </ObjectMinCardinality>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sushi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#JapaneseRice"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TastyVegeMix"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sandwich"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSauce"/>
+                <Class IRI="#Sauce"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Vegetable"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Temperature"/>
+        <ObjectUnionOf>
+            <Class IRI="#Cold"/>
+            <Class IRI="#Hot"/>
+            <Class IRI="#Warm"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ThaiRice"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Rice"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasTemperature"/>
+                <Class IRI="#Warm"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ThaiRice"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Rice"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#hasCountryOfOrigin"/>
+                <NamedIndividual IRI="#Thailand"/>
+            </ObjectHasValue>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TripleS-SmokeySalmonSandwich"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sandwich"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#SmokedSalmon"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Tuna"/>
+        <Class IRI="#x-Tuna"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TunaFantasy"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sandwich"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#Tuna"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WagyuBeefSpecial"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Burger"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#WagyuBeef"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.productontology.org/id/Asparagus"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlmondNuts"/>
+        <Class IRI="#Nuts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apfelstrudel"/>
+        <Class IRI="http://www.productontology.org/id/Apple_cake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apfelstrudel"/>
+        <Class IRI="#Cake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apfelstrudel"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Austria"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apple"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AustralianPremiumBeef"/>
+        <Class IRI="#Beef"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Avocado"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BalsamicVinegar"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BarbecueSauce"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Beef"/>
+        <Class IRI="#Meat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlackyFortress"/>
+        <Class IRI="#Cake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bread"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Burger"/>
+        <Class IRI="#Mains"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Burger"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#BurgerBread"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BurgerBread"/>
+        <Class IRI="#Bread"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cake"/>
+        <Class IRI="#Dessert"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capscium"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CashewNutSauce"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CashewNuts"/>
+        <Class IRI="#Nuts"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChampionIceCream"/>
+        <Class IRI="#IceCream"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChampionIceCream"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Italy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cheese"/>
+        <Class IRI="http://www.productontology.org/id/Dairy_product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cheese"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CheeseyDelight"/>
+        <Class IRI="#Cake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CheesyChickenLoving"/>
+        <Class IRI="#Burger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CherryTomatoes"/>
+        <Class IRI="#Tomato"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chicken"/>
+        <Class IRI="#Meat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChickenEggWhichComesFirstBurpppp"/>
+        <Class IRI="#Burger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChickenEggWhichComesFirstBurpppp"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Singapore"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChineseWokStirFriedRice"/>
+        <Class IRI="#Others"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChineseWokStirFriedRice"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#China"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Chocolate"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cold"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CookingMethod"/>
+        <Class IRI="#DomainConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Country"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#DomainConcept"/>
+            <ObjectOneOf>
+                <NamedIndividual IRI="#Greece"/>
+                <NamedIndividual IRI="#Austria"/>
+                <NamedIndividual IRI="#France"/>
+                <NamedIndividual IRI="#Thailand"/>
+                <NamedIndividual IRI="#Russia"/>
+                <NamedIndividual IRI="#China"/>
+                <NamedIndividual IRI="#Italy"/>
+                <NamedIndividual IRI="#Japan"/>
+                <NamedIndividual IRI="#America"/>
+                <NamedIndividual IRI="#Australia"/>
+                <NamedIndividual IRI="#Singapore"/>
+            </ObjectOneOf>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cucumber"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Curry"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dessert"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DijonMustard"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DijonMustard"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#France"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Egg"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamousChocolateIceCream"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamousChocolateIceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTemperature"/>
+            <Class IRI="#Cold"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilletOFish"/>
+        <Class IRI="#Burger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FilletOFish"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#America"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fish"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FishNChips"/>
+        <Class IRI="#Others"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FishNChips"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#cookingMethod"/>
+            <NamedIndividual IRI="#ShallowFrying"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FishNChips"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#America"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Food"/>
+        <Class IRI="#DomainConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrenchFries"/>
+        <Class IRI="#Sides"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FriedTofuSkin"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FriedTofuSkin"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTemperature"/>
+            <Class IRI="#Cold"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fruit"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FruitPlatter"/>
+        <Class IRI="#Dessert"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GardenSalad"/>
+        <Class IRI="#Salad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GardenSalad"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Italy"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GarlicClove"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreekSalad"/>
+        <Class IRI="#Salad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreekSalad"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Greece"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreenApple"/>
+        <Class IRI="#Apple"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreenCapscium"/>
+        <Class IRI="#Capscium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GreenOnions"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroundPepper"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Halibut"/>
+        <Class IRI="#Fish"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hot"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCream"/>
+        <Class IRI="#Dessert"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCream"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#IceCreamCone"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IceCreamCone"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inarizushi"/>
+        <Class IRI="#Sushi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IncredibleBeefGoodness"/>
+        <Class IRI="#Burger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IncredibleBeefGoodness"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Australia"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ingredients"/>
+        <Class IRI="#DomainConcept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JapaneseCurryRice"/>
+        <Class IRI="#Others"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JapaneseRice"/>
+        <Class IRI="#Rice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JapaneseRice"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Japan"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lamb"/>
+        <Class IRI="#Meat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lettuce"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mains"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mango"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaryHadALittleLamb"/>
+        <Class IRI="#Burger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaryHadALittleLamb"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#America"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mayonaise"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mayonnaise"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meat"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Meat"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasTemperature"/>
+            <Class IRI="#Hot"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Milk"/>
+        <Class IRI="http://www.productontology.org/id/Dairy_product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Milk"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nuts"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OliveOil"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Onion"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OnionRings"/>
+        <Class IRI="#Sides"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Others"/>
+        <Class IRI="#Mains"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OysterSauce"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OysterSauce"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#China"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pear"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pineapple"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlumTomatoes"/>
+        <Class IRI="#Tomato"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Potato"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PotatoSalad"/>
+        <Class IRI="#Salad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RedApple"/>
+        <Class IRI="#Apple"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RedCapscium"/>
+        <Class IRI="#Capscium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rice"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RussianStyleEggSalad"/>
+        <Class IRI="#Salad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RussianStyleEggSalad"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Russia"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sachertorte"/>
+        <Class IRI="#Cake"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sachertorte"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Austria"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Salad"/>
+        <Class IRI="#Sides"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Salad"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#cookingMethod"/>
+            <NamedIndividual IRI="#Raw"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Salmon"/>
+        <Class IRI="#Fish"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SalmonSushi"/>
+        <Class IRI="#Sushi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sandwich"/>
+        <Class IRI="#Mains"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sandwich"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#SandwichBread"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sandwich"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#cookingMethod"/>
+            <NamedIndividual IRI="#Raw"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SandwichBread"/>
+        <Class IRI="#Bread"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sauce"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SeaWeed"/>
+        <Class IRI="#Vegetable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sides"/>
+        <Class IRI="#Food"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SmokedSalmon"/>
+        <Class IRI="#Fish"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SnickersBar"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SnickersSalad"/>
+        <Class IRI="#Salad"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SnickersSalad"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#America"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SourCream"/>
+        <Class IRI="http://www.productontology.org/id/Dairy_product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SourCream"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Strawberry"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sushi"/>
+        <Class IRI="#Others"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sushi"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#cookingMethod"/>
+            <NamedIndividual IRI="#Fresh"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TarTarSauce"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TastyVegeMix"/>
+        <Class IRI="#Sandwich"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperature"/>
+        <Class IRI="#ValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThaiRice"/>
+        <Class IRI="#Rice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThaiRice"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Thailand"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThaiSweetChilli"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ThaiSweetChilli"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Thailand"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tomato"/>
+        <Class IRI="#Fruit"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TomatoKetchup"/>
+        <Class IRI="#Sauce"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TomatoKetchup"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#America"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TripleS-SmokeySalmonSandwich"/>
+        <Class IRI="#Sandwich"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tuna"/>
+        <Class IRI="#Fish"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TunaFantasy"/>
+        <Class IRI="#Sandwich"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegetable"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WagyuBeef"/>
+        <Class IRI="#Beef"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WagyuBeefSpecial"/>
+        <Class IRI="#Burger"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WagyuBeefSpecial"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Japan"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Warm"/>
+        <Class IRI="#Temperature"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#YellowCapscium"/>
+        <Class IRI="#Capscium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yogurt"/>
+        <Class IRI="http://www.productontology.org/id/Dairy_product"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yogurt"/>
+        <Class IRI="#Ingredients"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Apple"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Bread"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Cake"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Cheese"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Chocolate"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Curry"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Fruit"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Salad"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Sauce"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#x-Tuna"/>
+        <Class IRI="#MergeShadow"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Cold"/>
+        <Class IRI="#Hot"/>
+        <Class IRI="#Warm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Dessert"/>
+        <Class IRI="#Mains"/>
+        <Class IRI="#Sides"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#America"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Austria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#Barbequing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#Boiling"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#China"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#DeepFrying"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#France"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#Fresh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Greece"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Italy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rice"/>
+        <NamedIndividual IRI="#JapRiceBatch33"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Japan"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="#JapRiceBatch33"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Japan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#Order33ChickenBurgerWithEggs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#Egg"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#Order33ChickenBurgerWithEggs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#Chicken"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#Order33ChickenBurgerWithEggs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#Order33ChickenBurgerWithoutEggs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="4">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#Chicken"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#Order33ChickenBurgerWithoutEggs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#Order34ChickenBurger"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="4">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#Chicken"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#Order34ChickenBurger"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#Order35FishFillet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSauce"/>
+            <Class IRI="#TarTarSauce"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Order35FishFillet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#Halibut"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#Order35FishFillet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#Order36LambChop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#Lamb"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#Order36LambChop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#Order37FishFillet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSauce"/>
+            <Class IRI="#TarTarSauce"/>
+        </ObjectSomeValuesFrom>
+        <NamedIndividual IRI="#Order37FishFillet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#Halibut"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#Order37FishFillet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#Raw"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rice"/>
+        <NamedIndividual IRI="#RiceBatch34"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasCountryOfOrigin"/>
+            <NamedIndividual IRI="#Thailand"/>
+        </ObjectHasValue>
+        <NamedIndividual IRI="#RiceBatch34"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Russia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#ShallowFrying"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Singapore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#Stewing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#StirFried"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Country"/>
+        <NamedIndividual IRI="#Thailand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CookingMethod"/>
+        <NamedIndividual IRI="#Toasting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#WagyuBeefNotSoNice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty IRI="#hasIngredient"/>
+            <Class IRI="#WagyuBeef"/>
+        </ObjectExactCardinality>
+        <NamedIndividual IRI="#WagyuBeefNotSoNice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Burger"/>
+        <NamedIndividual IRI="#WagyuBeefRaw"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <ObjectIntersectionOf>
+            <Class IRI="#Burger"/>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#cookingMethod"/>
+                <NamedIndividual IRI="#Barbequing"/>
+            </ObjectHasValue>
+            <ObjectExactCardinality cardinality="4">
+                <ObjectProperty IRI="#hasIngredient"/>
+                <Class IRI="#WagyuBeef"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+        <NamedIndividual IRI="#33WagyuBurgerWellDone"/>
+    </ClassAssertion>
+    <SameIndividual>
+        <NamedIndividual IRI="#Fresh"/>
+        <NamedIndividual IRI="#Raw"/>
+    </SameIndividual>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSauce"/>
+        <ObjectProperty IRI="#hasIngredient"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTemperature"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isIngredientOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSauceOf"/>
+        <ObjectProperty IRI="#isIngredientOf"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <ObjectProperty IRI="#isIngredientOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isSauceOf"/>
+        <ObjectProperty IRI="#hasSauce"/>
+    </InverseObjectProperties>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#hasTemperature"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <Class IRI="#Food"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSauce"/>
+        <Class IRI="#Food"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isIngredientOf"/>
+        <Class IRI="#Ingredients"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isSauceOf"/>
+        <Class IRI="#Ingredients"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasIngredient"/>
+        <Class IRI="#Ingredients"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSauce"/>
+        <Class IRI="#Ingredients"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTemperature"/>
+        <Class IRI="#Temperature"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isIngredientOf"/>
+        <Class IRI="#Food"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isSauceOf"/>
+        <Class IRI="#Food"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Apfelstrudel</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any cake that has at least 1 apple on it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Burger</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Burgers that uses Burger Bread as its ingredients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ChampionIceCream</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any cake that has at least 1 famouse chocolate ice-cream on it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CheesyChickenLoving</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Burger that has at least 1 serving of Cheese and 3 servings of Chicken</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ChickenEggWhichComesFirstBurpppp</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Burger that has at least 3 servings of Chicken and 1 Egg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ChineseWokStirFriedRice</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Mains that has at least 1 serving of Rice and Oyster Sauce. Must also be cooked using the Stir Frying method
+.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FilletOFish</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Burger that has at least 2 servings Halibut (Fish) as its ingredients and served with at least 1 serving of Tar Tar sauce</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fish</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Measurements in 100g</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FishNChips</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Main that is not a Burger or Sandwich, that contains at the least 2 servings of ingredient Halibut (Fish) and has at least 1 serving of Mayonnaise as its sauce</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FrenchFries</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sides that has at least 2 servings of Potato and is cooked using the deep frying method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fruit</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">1 Portion refers to 100g</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GardenSalad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any salad that involve at least 1 serving of lettuce, green onions, cheese and avocado, and olive oil.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GreekSalad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any salad that has at least 1 serving of Cucumber and 1 serving of Balsamic Vinegar and Olive Oil</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Inarizushi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Sushi that has at least 1 serving of Fried Tofu Skin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IncredibleBeefGoodness</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Burger that has at least 2 servings of Australian Premium Beef</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaryHadALittleLamb</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Burger that has at least 1 serving of Lamb</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OnionRings</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sides that has at least 2 servings of Onions and is cooked using the deep frying method</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Others</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Other mains that our restaurant serve</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PotatoSalad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any salad that has at least 1 serving of potato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RussianStyleEggSalad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Salad that has at least 1 serving of sour cream and yogurt topped with Dijon Mustard as dress (1 serving)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sachertorte</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any cake that has at least 1 chocolate on it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Salad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Salads prepared with Raw Ingredients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SalmonSushi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Sushi that has at least 1 portion of Salmon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sandwich</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Sandwiches that uses Sandwich Bread as its ingredients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sides</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Irresistable Side Dishes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SnickersSalad</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Salad with at least 3 Snickers Bar and at least 1 portion of Green Apple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sushi</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Anything that has at least 1 serving of Japanese Rice as its ingredient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TastyVegeMix</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any sandwich that has at least 3 servings of Vegetable as ingredients and at least 1 serving of sauce.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TripleS-SmokeySalmonSandwich</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any sandwich that has at least 2 serving of SmokedSalmon as ingredients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WagyuBeefSpecial</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any Burger that has at least 1 serving of Wagyu Beef</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasIngredient</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Transitive because the ingredients of ingredients are ingredients of the whole</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasSauce</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasSauce is Irreflexive because it never replace itself.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

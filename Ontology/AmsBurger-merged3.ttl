@@ -1,0 +1,2171 @@
+@prefix : <http://www.semanticweb.org/adamctj/ontologies/AmsBurger#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/adamctj/ontologies/AmsBurger> .
+
+<http://www.semanticweb.org/adamctj/ontologies/AmsBurger> rdf:type owl:Ontology ;
+                                                          
+                                                          <http://purl.org/dc/elements/1.1/creator> "Adam Chee"@en ;
+                                                          
+                                                          <http://purl.org/dc/elements/1.1/title> "AmsBurger Restaurant Ontology"@en ;
+                                                          
+                                                          rdfs:comment "An ontology of a AmsBurger Restaurant in Singapore. Date of Establishment still unknown. Currently still at planning stage."@en ;
+                                                          
+                                                          owl:imports <http://www.productontology.org/#> .
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#cookingMethod
+
+:cookingMethod rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#hasCountryOfOrigin
+
+:hasCountryOfOrigin rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#hasIngredient
+
+:hasIngredient rdf:type owl:ObjectProperty ;
+               
+               rdfs:comment "Transitive because the ingredients of ingredients are ingredients of the whole"@en ;
+               
+               rdfs:domain :Food ;
+               
+               rdfs:range :Ingredients ;
+               
+               rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#hasSauce
+
+:hasSauce rdf:type owl:ObjectProperty ;
+          
+          rdfs:comment "hasSauce is Irreflexive because it never replace itself."@en ;
+          
+          rdfs:domain :Food ;
+          
+          rdfs:range :Ingredients ;
+          
+          rdfs:subPropertyOf :hasIngredient .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#hasTemperature
+
+:hasTemperature rdf:type owl:ObjectProperty ,
+                         owl:TransitiveProperty ;
+                
+                rdfs:range :Temperature ;
+                
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#isIngredientOf
+
+:isIngredientOf rdf:type owl:ObjectProperty ;
+                
+                rdfs:range :Food ;
+                
+                rdfs:domain :Ingredients ;
+                
+                owl:inverseOf :hasIngredient ;
+                
+                rdfs:subPropertyOf owl:topObjectProperty .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#isSauceOf
+
+:isSauceOf rdf:type owl:ObjectProperty ;
+           
+           rdfs:range :Food ;
+           
+           rdfs:domain :Ingredients ;
+           
+           owl:inverseOf :hasSauce ;
+           
+           rdfs:subPropertyOf :isIngredientOf .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.productontology.org/id/Apple
+
+<http://www.productontology.org/id/Apple> owl:equivalentClass :x-Apple .
+
+
+
+###  http://www.productontology.org/id/Apple_cake
+
+<http://www.productontology.org/id/Apple_cake> rdf:type owl:Class .
+
+
+
+###  http://www.productontology.org/id/Asparagus
+
+<http://www.productontology.org/id/Asparagus> rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.productontology.org/id/Balsamic_vinegar
+
+<http://www.productontology.org/id/Balsamic_vinegar> owl:equivalentClass :BalsamicVinegar .
+
+
+
+###  http://www.productontology.org/id/Black_Forest_cake
+
+<http://www.productontology.org/id/Black_Forest_cake> owl:equivalentClass :BlackyFortress .
+
+
+
+###  http://www.productontology.org/id/Bread
+
+<http://www.productontology.org/id/Bread> owl:equivalentClass :x-Bread .
+
+
+
+###  http://www.productontology.org/id/Cake
+
+<http://www.productontology.org/id/Cake> owl:equivalentClass :x-Cake .
+
+
+
+###  http://www.productontology.org/id/Cheese
+
+<http://www.productontology.org/id/Cheese> rdf:type owl:Class ;
+                                           
+                                           owl:equivalentClass :x-Cheese .
+
+
+
+###  http://www.productontology.org/id/Cheesecake
+
+<http://www.productontology.org/id/Cheesecake> owl:equivalentClass :CheeseyDelight .
+
+
+
+###  http://www.productontology.org/id/Chocolate
+
+<http://www.productontology.org/id/Chocolate> rdf:type owl:Class ;
+                                              
+                                              owl:equivalentClass :x-Chocolate .
+
+
+
+###  http://www.productontology.org/id/Curry
+
+<http://www.productontology.org/id/Curry> owl:equivalentClass :x-Curry .
+
+
+
+###  http://www.productontology.org/id/Dairy_product
+
+<http://www.productontology.org/id/Dairy_product> rdf:type owl:Class .
+
+
+
+###  http://www.productontology.org/id/Fruit
+
+<http://www.productontology.org/id/Fruit> owl:equivalentClass :x-Fruit .
+
+
+
+###  http://www.productontology.org/id/Ingredient
+
+<http://www.productontology.org/id/Ingredient> owl:equivalentClass :Ingredients .
+
+
+
+###  http://www.productontology.org/id/Olive_oil
+
+<http://www.productontology.org/id/Olive_oil> owl:equivalentClass :OliveOil .
+
+
+
+###  http://www.productontology.org/id/Salad
+
+<http://www.productontology.org/id/Salad> owl:equivalentClass :x-Salad .
+
+
+
+###  http://www.productontology.org/id/Sauce
+
+<http://www.productontology.org/id/Sauce> owl:equivalentClass :x-Sauce .
+
+
+
+###  http://www.productontology.org/id/Tuna
+
+<http://www.productontology.org/id/Tuna> owl:equivalentClass :x-Tuna .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#AlmondNuts
+
+:AlmondNuts rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Nuts .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Apfelstrudel
+
+:Apfelstrudel rdf:type owl:Class ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :Cake
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasIngredient ;
+                                                           owl:someValuesFrom :Apple
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:subClassOf <http://www.productontology.org/id/Apple_cake> ,
+                              :Cake ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasCountryOfOrigin ;
+                                owl:hasValue :Austria
+                              ] ;
+              
+              rdfs:comment "Any cake that has at least 1 apple on it."@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Apple
+
+:Apple rdf:type owl:Class ;
+       
+       owl:equivalentClass :x-Apple ;
+       
+       rdfs:subClassOf :Fruit .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#AustralianPremiumBeef
+
+:AustralianPremiumBeef rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Beef .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Avocado
+
+:Avocado rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Fruit .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#BalsamicVinegar
+
+:BalsamicVinegar rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#BarbecueSauce
+
+:BarbecueSauce rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Beef
+
+:Beef rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Meat .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#BlackyFortress
+
+:BlackyFortress rdf:type owl:Class ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( :Cake
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasIngredient ;
+                                                             owl:someValuesFrom :Chocolate
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasCountryOfOrigin ;
+                                                             owl:hasValue :America
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                rdfs:subClassOf :Cake .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Bread
+
+:Bread rdf:type owl:Class ;
+       
+       owl:equivalentClass :x-Bread ;
+       
+       rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Burger
+
+:Burger rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Mains ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasIngredient ;
+                          owl:someValuesFrom :BurgerBread
+                        ] ;
+        
+        rdfs:comment "Burgers that uses Burger Bread as its ingredients"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#BurgerBread
+
+:BurgerBread rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Bread .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Cake
+
+:Cake rdf:type owl:Class ;
+      
+      owl:equivalentClass :x-Cake ;
+      
+      rdfs:subClassOf :Dessert .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Capscium
+
+:Capscium rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#CashewNutSauce
+
+:CashewNutSauce rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#CashewNuts
+
+:CashewNuts rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Nuts .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#ChampionIceCream
+
+:ChampionIceCream rdf:type owl:Class ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:intersectionOf ( :IceCream
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasIngredient ;
+                                                               owl:someValuesFrom :FamousChocolateIceCream
+                                                             ]
+                                                           )
+                                      ] ;
+                  
+                  rdfs:subClassOf :IceCream ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasCountryOfOrigin ;
+                                    owl:hasValue :Italy
+                                  ] ;
+                  
+                  rdfs:comment "Any cake that has at least 1 famouse chocolate ice-cream on it."@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Cheese
+
+:Cheese rdf:type owl:Class ;
+        
+        owl:equivalentClass :x-Cheese ;
+        
+        rdfs:subClassOf <http://www.productontology.org/id/Dairy_product> ,
+                        :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#CheeseyDelight
+
+:CheeseyDelight rdf:type owl:Class ;
+                
+                owl:equivalentClass [ rdf:type owl:Class ;
+                                      owl:intersectionOf ( :Cake
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasIngredient ;
+                                                             owl:someValuesFrom <http://www.productontology.org/id/Cheese>
+                                                           ]
+                                                         )
+                                    ] ;
+                
+                rdfs:subClassOf :Cake .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#CheesyChickenLoving
+
+:CheesyChickenLoving rdf:type owl:Class ;
+                     
+                     owl:equivalentClass [ rdf:type owl:Class ;
+                                           owl:intersectionOf ( :Burger
+                                                                [ rdf:type owl:Class ;
+                                                                  owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :hasIngredient ;
+                                                                                         owl:someValuesFrom :Cheese
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :hasIngredient ;
+                                                                                         owl:onClass :Chicken ;
+                                                                                         owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
+                                                                                       ]
+                                                                                     )
+                                                                ]
+                                                              )
+                                         ] ;
+                     
+                     rdfs:subClassOf :Burger ;
+                     
+                     rdfs:comment "Any Burger that has at least 1 serving of Cheese and 3 servings of Chicken"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#CherryTomatoes
+
+:CherryTomatoes rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Tomato .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Chicken
+
+:Chicken rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Meat .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#ChickenEggWhichComesFirstBurpppp
+
+:ChickenEggWhichComesFirstBurpppp rdf:type owl:Class ;
+                                  
+                                  owl:equivalentClass [ rdf:type owl:Class ;
+                                                        owl:intersectionOf ( :Burger
+                                                                             [ rdf:type owl:Class ;
+                                                                               owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty :hasIngredient ;
+                                                                                                      owl:someValuesFrom :Egg
+                                                                                                    ]
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty :hasIngredient ;
+                                                                                                      owl:onClass :Chicken ;
+                                                                                                      owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
+                                                                                                    ]
+                                                                                                  )
+                                                                             ]
+                                                                           )
+                                                      ] ;
+                                  
+                                  rdfs:subClassOf :Burger ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasCountryOfOrigin ;
+                                                    owl:hasValue :Singapore
+                                                  ] ;
+                                  
+                                  rdfs:comment "Any Burger that has at least 3 servings of Chicken and 1 Egg"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#ChineseWokStirFriedRice
+
+:ChineseWokStirFriedRice rdf:type owl:Class ;
+                         
+                         owl:equivalentClass [ rdf:type owl:Restriction ;
+                                               owl:onProperty :cookingMethod ;
+                                               owl:hasValue :StirFried
+                                             ] ,
+                                             [ rdf:type owl:Class ;
+                                               owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :hasIngredient ;
+                                                                      owl:someValuesFrom :OysterSauce
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :hasIngredient ;
+                                                                      owl:someValuesFrom :Rice
+                                                                    ]
+                                                                  )
+                                             ] ;
+                         
+                         rdfs:subClassOf :Others ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasCountryOfOrigin ;
+                                           owl:hasValue :China
+                                         ] ;
+                         
+                         rdfs:comment """Any Mains that has at least 1 serving of Rice and Oyster Sauce. Must also be cooked using the Stir Frying method
+."""@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Chocolate
+
+:Chocolate rdf:type owl:Class ;
+           
+           owl:equivalentClass :x-Chocolate ;
+           
+           rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Cold
+
+:Cold rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Temperature .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#CookingMethod
+
+:CookingMethod rdf:type owl:Class ;
+               
+               rdfs:subClassOf :DomainConcept .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Country
+
+:Country rdf:type owl:Class ;
+         
+         rdfs:subClassOf [ rdf:type owl:Class ;
+                           owl:intersectionOf ( :DomainConcept
+                                                [ rdf:type owl:Class ;
+                                                  owl:oneOf ( :Greece
+                                                              :Austria
+                                                              :France
+                                                              :Thailand
+                                                              :Russia
+                                                              :China
+                                                              :Italy
+                                                              :Japan
+                                                              :America
+                                                              :Australia
+                                                              :Singapore
+                                                            )
+                                                ]
+                                              )
+                         ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Cucumber
+
+:Cucumber rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Curry
+
+:Curry rdf:type owl:Class ;
+       
+       owl:equivalentClass :x-Curry ;
+       
+       rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Dessert
+
+:Dessert rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Food .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#DijonMustard
+
+:DijonMustard rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Sauce ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasCountryOfOrigin ;
+                                owl:hasValue :France
+                              ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#DomainConcept
+
+:DomainConcept rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Egg
+
+:Egg rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#FamousChocolateIceCream
+
+:FamousChocolateIceCream rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Ingredients ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTemperature ;
+                                           owl:someValuesFrom :Cold
+                                         ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#FilletOFish
+
+:FilletOFish rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Burger
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasSauce ;
+                                                          owl:someValuesFrom :TarTarSauce
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:onClass :Halibut ;
+                                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Burger ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCountryOfOrigin ;
+                               owl:hasValue :America
+                             ] ;
+             
+             rdfs:comment "Any Burger that has at least 2 servings Halibut (Fish) as its ingredients and served with at least 1 serving of Tar Tar sauce"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Fish
+
+:Fish rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Ingredients ;
+      
+      rdfs:comment "Measurements in 100g"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#FishNChips
+
+:FishNChips rdf:type owl:Class ;
+            
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:intersectionOf ( :Others
+                                                       [ rdf:type owl:Class ;
+                                                         owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :hasSauce ;
+                                                                                owl:someValuesFrom :Mayonnaise
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :hasIngredient ;
+                                                                                owl:onClass :Halibut ;
+                                                                                owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                              ]
+                                                                            )
+                                                       ]
+                                                     )
+                                ] ;
+            
+            rdfs:subClassOf :Others ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :cookingMethod ;
+                              owl:hasValue :ShallowFrying
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCountryOfOrigin ;
+                              owl:hasValue :America
+                            ] ;
+            
+            rdfs:comment "Any Main that is not a Burger or Sandwich, that contains at the least 2 servings of ingredient Halibut (Fish) and has at least 1 serving of Mayonnaise as its sauce"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Food
+
+:Food rdf:type owl:Class ;
+      
+      rdfs:subClassOf :DomainConcept .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#FrenchFries
+
+:FrenchFries rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Sides
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :cookingMethod ;
+                                                          owl:hasValue :DeepFrying
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:onClass :Potato ;
+                                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Sides ;
+             
+             rdfs:comment "Sides that has at least 2 servings of Potato and is cooked using the deep frying method"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#FriedTofuSkin
+
+:FriedTofuSkin rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Ingredients ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTemperature ;
+                                 owl:someValuesFrom :Cold
+                               ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Fruit
+
+:Fruit rdf:type owl:Class ;
+       
+       owl:equivalentClass :x-Fruit ;
+       
+       rdfs:subClassOf :Ingredients ;
+       
+       rdfs:comment "1 Portion refers to 100g"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#FruitPlatter
+
+:FruitPlatter rdf:type owl:Class ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :Dessert
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasIngredient ;
+                                                           owl:allValuesFrom :Fruit
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:subClassOf :Dessert .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#GardenSalad
+
+:GardenSalad rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Salad
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:someValuesFrom :Avocado
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:someValuesFrom :Cheese
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:someValuesFrom :GreenOnions
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:someValuesFrom :Lettuce
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasSauce ;
+                                                          owl:someValuesFrom :OliveOil
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Salad ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCountryOfOrigin ;
+                               owl:hasValue :Italy
+                             ] ;
+             
+             rdfs:comment "Any salad that involve at least 1 serving of lettuce, green onions, cheese and avocado, and olive oil."@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#GarlicClove
+
+:GarlicClove rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#GreekSalad
+
+:GreekSalad rdf:type owl:Class ;
+            
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:intersectionOf ( :Salad
+                                                       [ rdf:type owl:Class ;
+                                                         owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :hasSauce ;
+                                                                                owl:someValuesFrom :BalsamicVinegar
+                                                                              ]
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty :hasSauce ;
+                                                                                owl:someValuesFrom :OliveOil
+                                                                              ]
+                                                                            )
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasIngredient ;
+                                                         owl:someValuesFrom :Cucumber
+                                                       ]
+                                                     )
+                                ] ;
+            
+            rdfs:subClassOf :Salad ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasCountryOfOrigin ;
+                              owl:hasValue :Greece
+                            ] ;
+            
+            rdfs:comment "Any salad that has at least 1 serving of Cucumber and 1 serving of Balsamic Vinegar and Olive Oil"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#GreenApple
+
+:GreenApple rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Apple .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#GreenCapscium
+
+:GreenCapscium rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Capscium .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#GreenOnions
+
+:GreenOnions rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#GroundPepper
+
+:GroundPepper rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Halibut
+
+:Halibut rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Fish .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Hot
+
+:Hot rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Temperature .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#IceCream
+
+:IceCream rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Dessert ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasIngredient ;
+                            owl:someValuesFrom :IceCreamCone
+                          ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#IceCreamCone
+
+:IceCreamCone rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Inarizushi
+
+:Inarizushi rdf:type owl:Class ;
+            
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:intersectionOf ( :Sushi
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasIngredient ;
+                                                         owl:someValuesFrom :FriedTofuSkin
+                                                       ]
+                                                     )
+                                ] ;
+            
+            rdfs:subClassOf :Sushi ;
+            
+            rdfs:comment "Any Sushi that has at least 1 serving of Fried Tofu Skin"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#IncredibleBeefGoodness
+
+:IncredibleBeefGoodness rdf:type owl:Class ;
+                        
+                        owl:equivalentClass [ rdf:type owl:Class ;
+                                              owl:intersectionOf ( :Burger
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty :hasIngredient ;
+                                                                     owl:onClass :AustralianPremiumBeef ;
+                                                                     owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                   ]
+                                                                 )
+                                            ] ;
+                        
+                        rdfs:subClassOf :Burger ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasCountryOfOrigin ;
+                                          owl:hasValue :Australia
+                                        ] ;
+                        
+                        rdfs:comment "Any Burger that has at least 2 servings of Australian Premium Beef"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Ingredients
+
+:Ingredients rdf:type owl:Class ;
+             
+             rdfs:subClassOf :DomainConcept .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#JapaneseCurryRice
+
+:JapaneseCurryRice rdf:type owl:Class ;
+                   
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:intersectionOf ( :Others
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasIngredient ;
+                                                                owl:someValuesFrom :Curry
+                                                              ]
+                                                            )
+                                       ] ;
+                   
+                   rdfs:subClassOf :Others .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#JapaneseRice
+
+:JapaneseRice rdf:type owl:Class ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :Rice
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasCountryOfOrigin ;
+                                                           owl:hasValue :Japan
+                                                         ]
+                                                       )
+                                  ] ,
+                                  [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :Rice
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTemperature ;
+                                                           owl:someValuesFrom :Cold
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:subClassOf :Rice ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasCountryOfOrigin ;
+                                owl:hasValue :Japan
+                              ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Lamb
+
+:Lamb rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Meat .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Lettuce
+
+:Lettuce rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Mains
+
+:Mains rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Food .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Mango
+
+:Mango rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Fruit .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#MaryHadALittleLamb
+
+:MaryHadALittleLamb rdf:type owl:Class ;
+                    
+                    owl:equivalentClass [ rdf:type owl:Class ;
+                                          owl:intersectionOf ( :Burger
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :hasIngredient ;
+                                                                 owl:someValuesFrom :Lamb
+                                                               ]
+                                                             )
+                                        ] ;
+                    
+                    rdfs:subClassOf :Burger ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasCountryOfOrigin ;
+                                      owl:hasValue :America
+                                    ] ;
+                    
+                    rdfs:comment "Any Burger that has at least 1 serving of Lamb"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Mayonaise
+
+:Mayonaise rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Mayonnaise
+
+:Mayonnaise rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Meat
+
+:Meat rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Ingredients ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTemperature ;
+                        owl:someValuesFrom :Hot
+                      ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#MergeShadow
+
+:MergeShadow rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Milk
+
+:Milk rdf:type owl:Class ;
+      
+      rdfs:subClassOf <http://www.productontology.org/id/Dairy_product> ,
+                      :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Nuts
+
+:Nuts rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#OliveOil
+
+:OliveOil rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Onion
+
+:Onion rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#OnionRings
+
+:OnionRings rdf:type owl:Class ;
+            
+            owl:equivalentClass [ rdf:type owl:Class ;
+                                  owl:intersectionOf ( :Sides
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :cookingMethod ;
+                                                         owl:hasValue :DeepFrying
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :hasIngredient ;
+                                                         owl:onClass :Onion ;
+                                                         owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                       ]
+                                                     )
+                                ] ;
+            
+            rdfs:subClassOf :Sides ;
+            
+            rdfs:comment "Sides that has at least 2 servings of Onions and is cooked using the deep frying method"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Others
+
+:Others rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Mains ;
+        
+        rdfs:comment "Other mains that our restaurant serve"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#OysterSauce
+
+:OysterSauce rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Sauce ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCountryOfOrigin ;
+                               owl:hasValue :China
+                             ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Pear
+
+:Pear rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Fruit .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Pineapple
+
+:Pineapple rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Fruit .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#PlumTomatoes
+
+:PlumTomatoes rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Tomato .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Potato
+
+:Potato rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#PotatoSalad
+
+:PotatoSalad rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Salad
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:someValuesFrom :Potato
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Salad ;
+             
+             rdfs:comment "Any salad that has at least 1 serving of potato"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#RedApple
+
+:RedApple rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Apple .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#RedCapscium
+
+:RedCapscium rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Capscium .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Rice
+
+:Rice rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#RussianStyleEggSalad
+
+:RussianStyleEggSalad rdf:type owl:Class ;
+                      
+                      owl:equivalentClass [ rdf:type owl:Class ;
+                                            owl:intersectionOf ( :Salad
+                                                                 [ rdf:type owl:Class ;
+                                                                   owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty :hasIngredient ;
+                                                                                          owl:someValuesFrom :SourCream
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty :hasIngredient ;
+                                                                                          owl:someValuesFrom :Yogurt
+                                                                                        ]
+                                                                                      )
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasSauce ;
+                                                                   owl:someValuesFrom :DijonMustard
+                                                                 ]
+                                                               )
+                                          ] ;
+                      
+                      rdfs:subClassOf :Salad ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasCountryOfOrigin ;
+                                        owl:hasValue :Russia
+                                      ] ;
+                      
+                      rdfs:comment "Any Salad that has at least 1 serving of sour cream and yogurt topped with Dijon Mustard as dress (1 serving)"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Sachertorte
+
+:Sachertorte rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Cake
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:someValuesFrom <http://www.productontology.org/id/Chocolate>
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasCountryOfOrigin ;
+                                                          owl:hasValue :Austria
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Cake ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasCountryOfOrigin ;
+                               owl:hasValue :Austria
+                             ] ;
+             
+             rdfs:comment "Any cake that has at least 1 chocolate on it."@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Salad
+
+:Salad rdf:type owl:Class ;
+       
+       owl:equivalentClass :x-Salad ;
+       
+       rdfs:subClassOf :Sides ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :cookingMethod ;
+                         owl:hasValue :Raw
+                       ] ;
+       
+       rdfs:comment "Salads prepared with Raw Ingredients"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Salmon
+
+:Salmon rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Fish .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#SalmonSushi
+
+:SalmonSushi rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Sushi
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:someValuesFrom :Salmon
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Sushi ;
+             
+             rdfs:comment "Any Sushi that has at least 1 portion of Salmon"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Sandwich
+
+:Sandwich rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Mains ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :cookingMethod ;
+                            owl:hasValue :Raw
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasIngredient ;
+                            owl:someValuesFrom :SandwichBread
+                          ] ;
+          
+          rdfs:comment "Sandwiches that uses Sandwich Bread as its ingredients"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#SandwichBread
+
+:SandwichBread rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Bread .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Sauce
+
+:Sauce rdf:type owl:Class ;
+       
+       owl:equivalentClass :x-Sauce ;
+       
+       rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#SeaWeed
+
+:SeaWeed rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Vegetable .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Sides
+
+:Sides rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Food ;
+       
+       rdfs:comment "Irresistable Side Dishes"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#SmokedSalmon
+
+:SmokedSalmon rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Fish .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#SnickersBar
+
+:SnickersBar rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#SnickersSalad
+
+:SnickersSalad rdf:type owl:Class ;
+               
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:intersectionOf ( :Salad
+                                                          [ rdf:type owl:Class ;
+                                                            owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :hasIngredient ;
+                                                                                   owl:someValuesFrom :GreenApple
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :hasIngredient ;
+                                                                                   owl:onClass :SnickersBar ;
+                                                                                   owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
+                                                                                 ]
+                                                                               )
+                                                          ]
+                                                        )
+                                   ] ;
+               
+               rdfs:subClassOf :Salad ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCountryOfOrigin ;
+                                 owl:hasValue :America
+                               ] ;
+               
+               rdfs:comment "Salad with at least 3 Snickers Bar and at least 1 portion of Green Apple"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#SourCream
+
+:SourCream rdf:type owl:Class ;
+           
+           rdfs:subClassOf <http://www.productontology.org/id/Dairy_product> ,
+                           :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Strawberry
+
+:Strawberry rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Fruit .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Sushi
+
+:Sushi rdf:type owl:Class ;
+       
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasIngredient ;
+                             owl:someValuesFrom :JapaneseRice
+                           ] ;
+       
+       rdfs:subClassOf :Others ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :cookingMethod ;
+                         owl:hasValue :Fresh
+                       ] ;
+       
+       rdfs:comment "Anything that has at least 1 serving of Japanese Rice as its ingredient"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#TarTarSauce
+
+:TarTarSauce rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Sauce .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#TastyVegeMix
+
+:TastyVegeMix rdf:type owl:Class ;
+              
+              owl:equivalentClass [ rdf:type owl:Class ;
+                                    owl:intersectionOf ( :Sandwich
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasSauce ;
+                                                           owl:someValuesFrom :Sauce
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasIngredient ;
+                                                           owl:onClass :Vegetable ;
+                                                           owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger
+                                                         ]
+                                                       )
+                                  ] ;
+              
+              rdfs:subClassOf :Sandwich ;
+              
+              rdfs:comment "Any sandwich that has at least 3 servings of Vegetable as ingredients and at least 1 serving of sauce."@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Temperature
+
+:Temperature rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Cold
+                                                 :Hot
+                                                 :Warm
+                                               )
+                                 ] ;
+             
+             rdfs:subClassOf :ValuePartition .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#ThaiRice
+
+:ThaiRice rdf:type owl:Class ;
+          
+          owl:equivalentClass [ rdf:type owl:Class ;
+                                owl:intersectionOf ( :Rice
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTemperature ;
+                                                       owl:someValuesFrom :Warm
+                                                     ]
+                                                   )
+                              ] ,
+                              [ rdf:type owl:Class ;
+                                owl:intersectionOf ( :Rice
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasCountryOfOrigin ;
+                                                       owl:hasValue :Thailand
+                                                     ]
+                                                   )
+                              ] ;
+          
+          rdfs:subClassOf :Rice ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasCountryOfOrigin ;
+                            owl:hasValue :Thailand
+                          ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#ThaiSweetChilli
+
+:ThaiSweetChilli rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Sauce ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasCountryOfOrigin ;
+                                   owl:hasValue :Thailand
+                                 ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Tomato
+
+:Tomato rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Fruit .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#TomatoKetchup
+
+:TomatoKetchup rdf:type owl:Class ;
+               
+               rdfs:subClassOf :Sauce ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasCountryOfOrigin ;
+                                 owl:hasValue :America
+                               ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#TripleS-SmokeySalmonSandwich
+
+:TripleS-SmokeySalmonSandwich rdf:type owl:Class ;
+                              
+                              owl:equivalentClass [ rdf:type owl:Class ;
+                                                    owl:intersectionOf ( :Sandwich
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty :hasIngredient ;
+                                                                           owl:onClass :SmokedSalmon ;
+                                                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                                         ]
+                                                                       )
+                                                  ] ;
+                              
+                              rdfs:subClassOf :Sandwich ;
+                              
+                              rdfs:comment "Any sandwich that has at least 2 serving of SmokedSalmon as ingredients"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Tuna
+
+:Tuna rdf:type owl:Class ;
+      
+      owl:equivalentClass :x-Tuna ;
+      
+      rdfs:subClassOf :Fish .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#TunaFantasy
+
+:TunaFantasy rdf:type owl:Class ;
+             
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:intersectionOf ( :Sandwich
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :hasIngredient ;
+                                                          owl:onClass :Tuna ;
+                                                          owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+                                                        ]
+                                                      )
+                                 ] ;
+             
+             rdfs:subClassOf :Sandwich .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#ValuePartition
+
+:ValuePartition rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Vegetable
+
+:Vegetable rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#WagyuBeef
+
+:WagyuBeef rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Beef .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#WagyuBeefSpecial
+
+:WagyuBeefSpecial rdf:type owl:Class ;
+                  
+                  owl:equivalentClass [ rdf:type owl:Class ;
+                                        owl:intersectionOf ( :Burger
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasIngredient ;
+                                                               owl:someValuesFrom :WagyuBeef
+                                                             ]
+                                                           )
+                                      ] ;
+                  
+                  rdfs:subClassOf :Burger ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasCountryOfOrigin ;
+                                    owl:hasValue :Japan
+                                  ] ;
+                  
+                  rdfs:comment "Any Burger that has at least 1 serving of Wagyu Beef"@en .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Warm
+
+:Warm rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Temperature .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#YellowCapscium
+
+:YellowCapscium rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Capscium .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Yogurt
+
+:Yogurt rdf:type owl:Class ;
+        
+        rdfs:subClassOf <http://www.productontology.org/id/Dairy_product> ,
+                        :Ingredients .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Apple
+
+:x-Apple rdf:type owl:Class ;
+         
+         rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Bread
+
+:x-Bread rdf:type owl:Class ;
+         
+         rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Cake
+
+:x-Cake rdf:type owl:Class ;
+        
+        rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Cheese
+
+:x-Cheese rdf:type owl:Class ;
+          
+          rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Chocolate
+
+:x-Chocolate rdf:type owl:Class ;
+             
+             rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Curry
+
+:x-Curry rdf:type owl:Class ;
+         
+         rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Fruit
+
+:x-Fruit rdf:type owl:Class ;
+         
+         rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Salad
+
+:x-Salad rdf:type owl:Class ;
+         
+         rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Sauce
+
+:x-Sauce rdf:type owl:Class ;
+         
+         rdfs:subClassOf :MergeShadow .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#x-Tuna
+
+:x-Tuna rdf:type owl:Class ;
+        
+        rdfs:subClassOf :MergeShadow .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#America
+
+:America rdf:type :Country ,
+                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Australia
+
+:Australia rdf:type :Country ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Austria
+
+:Austria rdf:type :Country ,
+                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Barbequing
+
+:Barbequing rdf:type :CookingMethod ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Boiling
+
+:Boiling rdf:type :CookingMethod ,
+                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#China
+
+:China rdf:type :Country ,
+                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#DeepFrying
+
+:DeepFrying rdf:type :CookingMethod ,
+                     owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#France
+
+:France rdf:type :Country ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Fresh
+
+:Fresh rdf:type :CookingMethod ,
+                owl:NamedIndividual ;
+       
+       owl:sameAs :Raw .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Greece
+
+:Greece rdf:type :Country ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Italy
+
+:Italy rdf:type :Country ,
+                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#JapRiceBatch33
+
+:JapRiceBatch33 rdf:type :Rice ,
+                         owl:NamedIndividual ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCountryOfOrigin ;
+                           owl:hasValue :Japan
+                         ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Japan
+
+:Japan rdf:type :Country ,
+                owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Order33ChickenBurgerWithEggs
+
+:Order33ChickenBurgerWithEggs rdf:type :Burger ,
+                                       owl:NamedIndividual ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasIngredient ;
+                                         owl:onClass :Chicken ;
+                                         owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasIngredient ;
+                                         owl:onClass :Egg ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                       ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Order33ChickenBurgerWithoutEggs
+
+:Order33ChickenBurgerWithoutEggs rdf:type :Burger ,
+                                          owl:NamedIndividual ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasIngredient ;
+                                            owl:onClass :Chicken ;
+                                            owl:qualifiedCardinality "4"^^xsd:nonNegativeInteger
+                                          ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Order34ChickenBurger
+
+:Order34ChickenBurger rdf:type :Burger ,
+                               owl:NamedIndividual ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasIngredient ;
+                                 owl:onClass :Chicken ;
+                                 owl:qualifiedCardinality "4"^^xsd:nonNegativeInteger
+                               ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Order35FishFillet
+
+:Order35FishFillet rdf:type :Burger ,
+                            owl:NamedIndividual ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasSauce ;
+                              owl:someValuesFrom :TarTarSauce
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasIngredient ;
+                              owl:onClass :Halibut ;
+                              owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+                            ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Order36LambChop
+
+:Order36LambChop rdf:type :Burger ,
+                          owl:NamedIndividual ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasIngredient ;
+                            owl:onClass :Lamb ;
+                            owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger
+                          ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Order37FishFillet
+
+:Order37FishFillet rdf:type :Burger ,
+                            owl:NamedIndividual ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasIngredient ;
+                              owl:onClass :Halibut ;
+                              owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasSauce ;
+                              owl:someValuesFrom :TarTarSauce
+                            ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Raw
+
+:Raw rdf:type :CookingMethod ,
+              owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#RiceBatch34
+
+:RiceBatch34 rdf:type :Rice ,
+                      owl:NamedIndividual ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasCountryOfOrigin ;
+                        owl:hasValue :Thailand
+                      ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Russia
+
+:Russia rdf:type :Country ,
+                 owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#ShallowFrying
+
+:ShallowFrying rdf:type :CookingMethod ,
+                        owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Singapore
+
+:Singapore rdf:type :Country ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Stewing
+
+:Stewing rdf:type :CookingMethod ,
+                  owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#StirFried
+
+:StirFried rdf:type :CookingMethod ,
+                    owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Thailand
+
+:Thailand rdf:type :Country ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#Toasting
+
+:Toasting rdf:type :CookingMethod ,
+                   owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#WagyuBeefNotSoNice
+
+:WagyuBeefNotSoNice rdf:type :Burger ,
+                             owl:NamedIndividual ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasIngredient ;
+                               owl:onClass :WagyuBeef ;
+                               owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger
+                             ] .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#WagyuBeefRaw
+
+:WagyuBeefRaw rdf:type :Burger ,
+                       owl:NamedIndividual .
+
+
+
+###  http://www.semanticweb.org/adamctj/ontologies/AmsBurger#33WagyuBurgerWellDone
+
+<http://www.semanticweb.org/adamctj/ontologies/AmsBurger#33WagyuBurgerWellDone> rdf:type owl:NamedIndividual ,
+                                                                                         [ rdf:type owl:Class ;
+                                                                                           owl:intersectionOf ( :Burger
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty :cookingMethod ;
+                                                                                                                  owl:hasValue :Barbequing
+                                                                                                                ]
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty :hasIngredient ;
+                                                                                                                  owl:onClass :WagyuBeef ;
+                                                                                                                  owl:qualifiedCardinality "4"^^xsd:nonNegativeInteger
+                                                                                                                ]
+                                                                                                              )
+                                                                                         ] .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Dessert
+                :Mains
+                :Sides
+              )
+] .
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cold
+                :Hot
+                :Warm
+              )
+] .
+
+
+
+
+###  Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net
+
